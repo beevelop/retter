@@ -15,7 +15,10 @@
 Typical use case: Some awesome command line tool generates the very same (but different) output every time (like every freakin' CI automation does). Now you want to get the data / values extracted from the output for further processing / analysis / whatever.
 
 ## Further processing
-
+You can use [jq](https://stedolan.github.io/jq/), a lightweight and flexible command-line JSON processor, to process the results even further.
+```sh
+retter examples/template examples/content | jq '[.issues]'
+```
 
 ## Example (parsing a Sonarlint output)
 #### Template
