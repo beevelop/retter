@@ -1,13 +1,22 @@
+#!/usr/bin/env node
+
 'use strict'
 
+const pkg = require('./package.json')
 const fs = require('fs-promise')
 const path = require('path')
 const util = require('util')
 const getStdin = require('get-stdin')
 const reverseMustache = require('reverse-mustache')
 
-const templateFile = path.resolve(process.argv[2])
+const templateFile = process.argv[2] ? path.resolve(process.argv[2]) : null
 const contentFile = process.argv[3] ? path.resolve(process.argv[3]) : null
+
+if (!templateFile) {
+  console.info(`retter@${pkg.version}`)
+  console.info('Usage: retter templateFile contentFile')
+  process.exit(0)
+}
 
 let content = ''
 fs.stat(templateFile).catch(function (err) {
