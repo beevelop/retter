@@ -42,7 +42,7 @@ fs.stat(templateFile).catch(function (err) {
     content: content
   })
 }).then(res => {
-  console.log(util.inspect(res, {depth: null, colors: true}))
+  console.log(JSON.stringify(res, null, 2))
 }).catch(err => {
   console.error(err)
 })
