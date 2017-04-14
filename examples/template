@@ -1,0 +1,11 @@
+-------------  SonarLint Report  -------------
+
+          {{issues}} issues ({{files}} files analyzed)
+
+          {{blocker}} blocker
+          {{critical}} critical
+          {{major}} major
+          {{minor}} minor
+          {{info}} info
+
+-------------------------------------------

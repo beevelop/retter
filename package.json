@@ -1,0 +1,17 @@
+{
+  "name": "retter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error 404: no tests found\" && exit 1"
+  },
+  "author": "Maik Hummel <yo@beevelop.com> (https://beevelop.com)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fs-promise": "^2.0.2",
+    "get-stdin": "^5.0.1",
+    "reverse-mustache": "^1.8.0"
+  }
+}
